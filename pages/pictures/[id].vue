@@ -3,6 +3,7 @@ import dayjs from "dayjs";
 import {getPictureById, Picture} from "~/api/pictures";
 
 const route = useRoute();
+const {locale} = useI18n();
 const data = ref<Picture>({
   id: '',
   title: '',
@@ -14,6 +15,10 @@ const data = ref<Picture>({
 const date = computed(() => dayjs(data.value.datetime).format('DD.MM.YYYY'))
 
 onBeforeMount(async () => {
+  data.value = await getPictureById(route.params.id as string)
+})
+
+watch(locale, async () => {
   data.value = await getPictureById(route.params.id as string)
 })
 </script>

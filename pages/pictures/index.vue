@@ -5,6 +5,7 @@ import {mockPictures} from "~/const/mockPictures";
 import {getPictures, Pictures} from "~/api/pictures";
 
 const router = useRouter();
+const {locale} = useI18n();
 const data = ref<Pictures>(mockPictures);
 
 onBeforeMount(async () => {
@@ -12,6 +13,10 @@ onBeforeMount(async () => {
 })
 
 const onDetailsClick = (id: string) => router.push(`/pictures/${id}`)
+
+watch(locale, async () => {
+  data.value = await getPictures()
+})
 </script>
 
 <template>

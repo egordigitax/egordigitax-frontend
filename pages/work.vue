@@ -8,11 +8,14 @@ const data = ref<Work>({
   image: '',
   items: []
 })
+const {locale} = useI18n();
 
 onBeforeMount(async () => {
   data.value = await getWork()
 })
-
+watch(locale, async () => {
+  data.value = await getWork()
+})
 </script>
 
 <template>

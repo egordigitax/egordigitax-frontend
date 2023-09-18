@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import {mockItems} from "~/const/mockItems";
 import dayjs from "dayjs";
 import {getItemById, Item} from "~/api/items";
 
 const route = useRoute();
+const {locale} = useI18n();
 const data = ref<Item>({
   id: '',
   title: '',
@@ -14,7 +14,11 @@ const data = ref<Item>({
 
 const date = computed(() => dayjs(data.value.datetime).format('DD.MM.YYYY'))
 
-onBeforeMount(async () => {
+onMounted(async () => {
+  data.value = await getItemById(route.params.id as string)
+})
+
+watch(locale, async () => {
   data.value = await getItemById(route.params.id as string)
 })
 </script>

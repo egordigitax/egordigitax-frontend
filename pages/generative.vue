@@ -5,12 +5,16 @@ const data = ref<Generative>({
   items: [],
   description: "",
 });
+const {locale} = useI18n();
 
 const handleProcess = async ({form, apiUrl}: {form: Record<string, string>, apiUrl: string}) => {
   await processGenerative(form, apiUrl);
 }
 
 onBeforeMount(async () => {
+  data.value = await getGenerative();
+})
+watch(locale, async () => {
   data.value = await getGenerative();
 })
 </script>

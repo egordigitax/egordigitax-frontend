@@ -6,8 +6,12 @@ import MainCard from "~/components/main/MainCard.vue";
 
 
 const data = ref<MainItems>(mockMain);
+const {locale} = useI18n();
 
 onBeforeMount(async () => {
+  data.value = await getMainItems()
+})
+watch(locale, async () => {
   data.value = await getMainItems()
 })
 </script>
