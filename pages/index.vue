@@ -1,11 +1,13 @@
 <script setup lang="ts">
 
-import {mockMain} from "~/const/mockMain";
 import {getMainItems, MainItems} from "~/api/main";
 import MainCard from "~/components/main/MainCard.vue";
 
 
-const data = ref<MainItems>(mockMain);
+const data = ref<MainItems>({
+  items: [],
+  description: "",
+});
 const {locale} = useI18n();
 
 onBeforeMount(async () => {
@@ -23,6 +25,7 @@ watch(locale, async () => {
     <main-card
         v-for="(item, index) in data.items"
         :item="item"
+        :link="item.url"
         :key="index"
     />
     </div>

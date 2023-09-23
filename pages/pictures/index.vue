@@ -1,12 +1,14 @@
 <script setup lang="ts">
 
 import ItemsGrid from "~/components/items/ItemsGrid.vue";
-import {mockPictures} from "~/const/mockPictures";
 import {getPictures, Pictures} from "~/api/pictures";
 
 const router = useRouter();
 const {locale} = useI18n();
-const data = ref<Pictures>(mockPictures);
+const data = ref<Pictures>({
+  items: [],
+  description: "",
+});
 
 onBeforeMount(async () => {
   data.value = await getPictures()

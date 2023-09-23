@@ -5,14 +5,16 @@ type IImageCardProps = {
   item: Item;
   link: string;
 }
-defineProps<IImageCardProps>()
+const props = defineProps<IImageCardProps>()
+const router = useRouter();
+const redirectToLink = () => router.push(props.link);
 
 </script>
 
 <template>
   <div class="border-2 border-none h-full">
-    <image-carousel class="w-full h-auto mb-4 aspect-square" :images="item.images" />
-    <span class="text-2xl text-gray-600 mb-2">{{item.title}}</span>
+    <image-carousel @click="redirectToLink" class="w-full h-auto mb-4 aspect-square cursor-pointer" :images="item.images" />
+    <nuxt-link :to="link" class="text-2xl text-gray-600 mb-2 hover:underline">{{item.title}}</nuxt-link>
     <p class="">
       {{item.description}}
     </p>

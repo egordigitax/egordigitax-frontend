@@ -18,6 +18,17 @@ import Default from "~/layouts/default.vue";
 const { locale } = useI18n()
 
 onBeforeMount(() => {
-  locale.value = localStorage.getItem('locale') || 'en'
+  const localLocale = localStorage.getItem('locale');
+  const systemLocale = navigator.language;
+  if (localLocale) {
+    locale.value = localLocale
+    return
+  }
+
+  if (!localLocale && systemLocale) {
+    locale.value = systemLocale === 'ru-RU' || systemLocale === 'ru' ? 'ru' : 'en'
+    localStorage.setItem('locale', locale.value)
+    return
+  }
 })
 </script>
