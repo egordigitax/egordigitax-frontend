@@ -3,8 +3,6 @@ version: "3"
 services:
   nuxt-docker-example:
     container_name: nuxt-docker-example
-    build:
-      context: .
-      dockerfile: DockerFile
+    build: .
     ports:
       - "3000:3000"
