@@ -11,11 +11,16 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+
+body {
+  padding-left: calc(100vw - 100%);
+}
 </style>
 <script setup lang="ts">
 import Default from "~/layouts/default.vue";
 
 const { locale } = useI18n()
+const router = useRouter();
 
 onBeforeMount(() => {
   const localLocale = localStorage.getItem('locale');
