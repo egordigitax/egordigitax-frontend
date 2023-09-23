@@ -29,7 +29,7 @@ export default defineI18nConfig(() => ({
       Recomendations: 'Recomendations',
     },
     ru: {
-      egordigitax: 'егоРДигитах',
+      egordigitax: 'egordigitax',
       Home: 'Главная',
       Items: 'Предметы',
       Pictures: 'Изображения',
