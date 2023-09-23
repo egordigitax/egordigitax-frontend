@@ -23,7 +23,7 @@ const toggleLocale = () => {
         <nuxt-icon name="burger" />
       </button>
     </div>
-    <div class="w-full flex-col lg:flex-row lg:items-center transition-all duration-500 lg:flex gap-8" :class="isExpanded ? 'flex' : 'hidden'">
+    <div class="w-full flex-col lg:flex-row transition-all duration-500 lg:flex gap-8" :class="isExpanded ? 'flex' : 'hidden'">
       <div class="flex gap-6 items-start flex-col lg:flex-row text-gray-500 font-normal">
         <NuxtLink to="/">{{ $t('Home') }}</NuxtLink>
         <NuxtLink to="/items">{{ $t('Items') }}</NuxtLink>
@@ -31,7 +31,7 @@ const toggleLocale = () => {
         <NuxtLink to="/generative">{{ $t('Generative') }}</NuxtLink>
         <NuxtLink to="/work">{{ $t('Work') }}</NuxtLink>
       </div>
-      <div class="flex items-center justify-between lg:justify-start gap-6 ml-0 lg:ml-auto">
+      <div class="flex items-start justify-between lg:justify-start gap-6 ml-0 lg:ml-auto">
         <button class="text-gray-500 font-normal hover:underline cursor-pointer pb-1.5" @click="toggleLocale">{{locale}}</button>
         <links-block/>
       </div>
