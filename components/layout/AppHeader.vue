@@ -14,8 +14,8 @@ const toggleLocale = () => {
 </script>
 
 <template>
-  <header class="flex text-2xl flex-col lg:flex-row">
-    <div class="flex text-accent mb-12 lg:mb-0 lg:mr-20  justify-between w-full lg:w-auto">
+  <header class="flex items-center text-2xl flex-col lg:flex-row">
+    <div class="flex text-accent mb-2 lg:mb-0 lg:mr-20 justify-between w-full lg:w-auto">
       <nuxt-link to="/" class="select-none">
         {{ $t('egordigitax') }}
       </nuxt-link>
@@ -23,13 +23,13 @@ const toggleLocale = () => {
         <nuxt-icon name="burger" />
       </button>
     </div>
-    <div class="w-full flex-col lg:flex-row transition-all duration-500 lg:flex gap-8" :class="isExpanded ? 'flex' : 'hidden'">
-      <div class="flex gap-6 items-start flex-col lg:flex-row text-gray-500 font-normal">
-        <NuxtLink class="hover:text-accent transition-all" to="/">{{ $t('Home') }}</NuxtLink>
-        <NuxtLink class="hover:text-accent transition-all" to="/items">{{ $t('Items') }}</NuxtLink>
-        <NuxtLink class="hover:text-accent transition-all" to="/pictures">{{ $t('Pictures') }}</NuxtLink>
-        <NuxtLink class="hover:text-accent transition-all" to="/generative">{{ $t('Generative') }}</NuxtLink>
-        <NuxtLink class="hover:text-accent transition-all" to="/work">{{ $t('Work') }}</NuxtLink>
+    <div class="w-full flex-col lg:flex-row transition-all duration-500 lg:flex gap-8 mt-4 lg:mt-0" :class="isExpanded ? 'flex' : 'hidden'">
+      <div class="flex gap-6 items- lg:items-center flex-col lg:flex-row text-gray-500 font-normal">
+        <nuxt-link class="hover:text-accent transition-all" to="/">{{ $t('Home') }}</nuxt-link>
+        <nuxt-link class="hover:text-accent transition-all" to="/items">{{ $t('Items') }}</nuxt-link>
+        <nuxt-link class="hover:text-accent transition-all" to="/pictures">{{ $t('Pictures') }}</nuxt-link>
+        <nuxt-link class="hover:text-accent transition-all" to="/generative">{{ $t('Generative') }}</nuxt-link>
+        <nuxt-link class="hover:text-accent transition-all" to="/work">{{ $t('Work') }}</nuxt-link>
       </div>
       <div class="flex items-start justify-between lg:justify-start gap-6 ml-0 lg:ml-auto">
         <button class="text-gray-500 font-normal hover:underline cursor-pointer pb-1.5" @click="toggleLocale">{{locale}}</button>

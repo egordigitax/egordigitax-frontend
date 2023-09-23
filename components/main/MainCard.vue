@@ -37,7 +37,7 @@ const redirectToLink = () => router.push(props.link)
         <nuxt-link :to="link" class="text-2xl text-gray-500 mb-2 hover:underline">{{ item.title }}</nuxt-link>
         <div>{{ item.description }}</div>
       </div>
-      <div class="flex items-end ml-auto">
+      <div v-if="item.title || item.description" class="flex items-end ml-auto">
         <nuxt-link :to="link" class="cursor-pointer text-accent hover:underline text-2xl">{{ $t('Show more') }}
         </nuxt-link>
       </div>

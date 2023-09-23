@@ -5,12 +5,12 @@ import AppFooter from "~/components/layout/AppFooter.vue";
 </script>
 
 <template>
-  <div class="flex flex-col container mx-auto min-h-screen px-9 lg:px-0">
-    <AppHeader class="pt-20 pb-10"/>
+  <div class="flex flex-col container mx-auto min-h-screen px-9 lg:px-9">
+    <app-header class="py-4 lg:pt-20 lg:pb-10"/>
     <div class="flex-grow basis-auto h-full">
       <slot/>
     </div>
-    <AppFooter  class="py-10"/>
+    <app-footer class="py-10"/>
   </div>
 </template>
 
