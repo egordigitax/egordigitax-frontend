@@ -21,12 +21,13 @@ watch(locale, async () => {
 <template>
   <div class="text-gray-400">
     <span class="block mb-5">{{ data.description}}</span>
-    <div class="flex items-center flex-col gap-20">
+    <div class="flex items-center flex-col">
     <main-card
         v-for="(item, index) in data.items"
         :item="item"
         :link="item.url"
         :key="index"
+        :class="{'mb-12': item.title || item.description}"
     />
     </div>
   </div>
