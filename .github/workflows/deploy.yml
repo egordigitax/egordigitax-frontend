@@ -1,5 +1,5 @@
-name: egordigitax backend deploy
-run-name: ${{ github.actor }} is deploying backend.
+name: egordigitax frontend deploy
+run-name: ${{ github.actor }} is deploying frontend.
 on: 
   push:
     branches:
