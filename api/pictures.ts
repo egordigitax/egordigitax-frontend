@@ -16,13 +16,13 @@ export interface Pictures {
 }
 
 export const getPictures = async (): Promise<Pictures> => {
-  return await fetchData<Pictures>(`${runtimeConfig.public.apiBaseUrl}/api/v1/pictures/all`, {
+  return await fetchData<Pictures>(`${runtimeConfig.public.apiBaseUrl}/v1/pictures/all`, {
     mode: 'cors'
   });
 };
 
 export const getPictureById = async (id: string): Promise<Picture> => {
-  const response = await fetch(`${runtimeConfig.public.apiBaseUrl}/api/v1/pictures/${id}`, {
+  const response = await fetch(`${runtimeConfig.public.apiBaseUrl}/v1/pictures/${id}`, {
     mode: 'cors'
   });
   return await response.json();

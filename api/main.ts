@@ -19,5 +19,5 @@ export interface MainItems {
 };
 
 export const getMainItems = async (): Promise<MainItems> => {
-  return await fetchData<MainItems>(`${runtimeConfig.public.apiBaseUrl}/api/v1/posts/all`);
+  return await fetchData<MainItems>(`${runtimeConfig.public.apiBaseUrl}/v1/posts/all`);
 }

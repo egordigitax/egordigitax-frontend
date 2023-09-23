@@ -16,7 +16,7 @@ export interface Work {
 }
 
 export const getWork = async (): Promise<Work> => {
-  return await fetchData<Work>(`${runtimeConfig.public.apiBaseUrl}/api/v1/works/all`, {
+  return await fetchData<Work>(`${runtimeConfig.public.apiBaseUrl}/v1/works/all`, {
     mode: 'cors'
   });
 }

@@ -22,7 +22,7 @@ export interface Generative {
 }
 
 export const getGenerative = async (): Promise<Generative> => {
-  return await fetchData<Generative>(`${runtimeConfig.public.apiBaseUrl}/api/v1/generatives/all`, {
+  return await fetchData<Generative>(`${runtimeConfig.public.apiBaseUrl}/v1/generatives/all`, {
     mode: 'cors'
   });
 }

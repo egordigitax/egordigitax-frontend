@@ -32,7 +32,7 @@ const toggleLocale = () => {
         <NuxtLink to="/work">{{ $t('Work') }}</NuxtLink>
       </div>
       <div class="flex items-center justify-between lg:justify-start gap-6 ml-0 lg:ml-auto">
-        <button class="text-gray-500 font-normal hover:underline cursor-pointer" @click="toggleLocale">{{locale}}</button>
+        <button class="text-gray-500 font-normal hover:underline cursor-pointer pb-1.5" @click="toggleLocale">{{locale}}</button>
         <links-block/>
       </div>
     </div>
