@@ -3,6 +3,7 @@
 import LinksBlock from "~/components/LinksBlock.vue";
 
 const isExpanded = ref(false);
+const router = useRouter();
 const { locale } = useI18n()
 
 const toggleExpand = () => isExpanded.value = !isExpanded.value;
@@ -11,6 +12,8 @@ const toggleLocale = () => {
   locale.value = newValue;
   localStorage.setItem('locale', newValue);
 };
+
+router.afterEach(() => isExpanded.value = false)
 </script>
 
 <template>
