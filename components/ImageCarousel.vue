@@ -15,8 +15,9 @@ const offset = computed(() => `transform: translateX(-${currentIndex.value * (ca
 const onMouseMove = (event: MouseEvent) => {
   if (event.target === null || carousel.value === null) return;
   const part = Math.ceil(carousel.value?.offsetWidth / props.images?.length);
+  const index = Math.floor(event.offsetX / part);
 
-  currentIndex.value = Math.floor(event.offsetX / part);
+  currentIndex.value = index < 0 || index > props.images?.length-1 ? props.images.length-1 : index
   console.log(currentIndex.value)
 }
 const resetCurrentIndex = () => currentIndex.value = 0;
