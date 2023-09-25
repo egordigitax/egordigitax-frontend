@@ -9,7 +9,16 @@ interface IMainPromoCard {
 
 const router = useRouter();
 const props = defineProps<IMainPromoCard>()
-const redirectToLink = () => router.push(props.link)
+const redirectToLink = () => {
+  try {
+    if (Boolean(new URL(props.link))) {
+      window.open(props.link, '_blank')
+    }
+  } catch (e: any) {
+    router.push(props.link)
+  }
+}
+
 </script>
 
 <template>
