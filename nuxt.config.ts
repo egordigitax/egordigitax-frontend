@@ -26,9 +26,10 @@ export default defineNuxtConfig({
   app: {
     head: {
       meta: [
-        {name: 'og:title', content: 'Digitax portfolio'},
-        {name: 'og:description', content: 'Explore latest project and recent content'},
-        {name: 'og:image', content: 'https://i1.sndcdn.com/artworks-jed24yeHGhe9LXDz-ZRaA5A-t500x500.jpg'},
+        {property: 'og:title', content: 'Digitax portfolio'},
+        {property: 'og:description', content: 'Explore latest project and recent content'},
+        {property: 'og:image', content: 'https://i1.sndcdn.com/artworks-jed24yeHGhe9LXDz-ZRaA5A-t500x500.jpg'},
+        {property: 'og:url', content: 'https://egordigitax.com/'}
       ]
     }
   }
