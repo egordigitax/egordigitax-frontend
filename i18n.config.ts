@@ -2,7 +2,7 @@ export default defineI18nConfig(() => ({
   locale: 'en',
   messages: {
     en: {
-      egordigitax: 'egordigitax',
+      egordigitax: 'egordigitaxxx',
       Home: 'Home',
       Items: 'Items',
       Pictures: 'Pictures',
@@ -29,7 +29,7 @@ export default defineI18nConfig(() => ({
       Recomendations: 'Recomendations',
     },
     ru: {
-      egordigitax: 'egordigitax',
+      egordigitax: 'egordigitaxxx',
       Home: 'Главная',
       Items: 'Предметы',
       Pictures: 'Изображения',
