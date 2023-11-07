@@ -30,7 +30,8 @@ export default defineNuxtConfig({
         {property: 'og:site_name', content: 'egordigitax'},
         {property: 'og:description', content: 'Explore latest project and recent content'},
         {property: 'og:image', content: 'https://i1.sndcdn.com/artworks-jed24yeHGhe9LXDz-ZRaA5A-t500x500.jpg'},
-        {property: 'og:url', content: 'https://egordigitax.com/'}
+        {property: 'og:url', content: 'https://egordigitax.com/'},
+        {property: 'og:site_name', content: 'EgorVpopex'}
       ]
     }
   }
