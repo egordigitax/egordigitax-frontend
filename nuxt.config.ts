@@ -22,5 +22,12 @@ export default defineNuxtConfig({
     public: {
       apiBaseUrl: process.env.NUXT_API_BASE_URL,
     },
+  },
+  app: {
+    head: {
+      ogTitle: 'Digitax portfolio',
+      ogDescription: 'Explore latest project and recent content',
+      ogImage: 'https://i1.sndcdn.com/artworks-jed24yeHGhe9LXDz-ZRaA5A-t500x500.jpg'
+    }
   }
 })
