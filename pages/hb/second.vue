@@ -2,21 +2,21 @@
 import {defineComponent} from 'vue'
 
 export default defineComponent({
-  name: "index"
+  name: "second"
 })
 </script>
 
 <template>
-<div class="content">
-  <div class="question">
-    <div class="text">What is your current weight?</div>
-    <input class="weight-input" type="text" id="name" name="name" placeholder="kg" />
-    <nuxt-link to="/hb/second" class="weight-input in-button"><button class="weight-input in-button">Next!</button></nuxt-link>
+  <div class="content">
+    <div class="question">
+      <div class="text">What is your target weight?</div>
+      <input class="weight-input" type="text" id="name" name="name" placeholder="kg" />
+      <nuxt-link to="/hb/third" class="weight-input in-button"><button class="weight-input in-button">Next!</button></nuxt-link>
+    </div>
+    <div class="img-cont">
+      <img src="https://sun9-78.userapi.com/impg/U67Fp6Z-OK96-0F3HkVk9WXAMoOx0wu0KKslBQ/drJSS7ATDWo.jpg?size=604x602&quality=95&sign=2633d960b32b1868202e1eb0656f0998&type=album" alt="">
+    </div>
   </div>
-  <div class="img-cont">
-    <img src="https://sun9-78.userapi.com/impg/U67Fp6Z-OK96-0F3HkVk9WXAMoOx0wu0KKslBQ/drJSS7ATDWo.jpg?size=604x602&quality=95&sign=2633d960b32b1868202e1eb0656f0998&type=album" alt="">
-  </div>
-</div>
 </template>
 
 <style scoped>

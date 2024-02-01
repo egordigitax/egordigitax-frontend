@@ -2,21 +2,20 @@
 import {defineComponent} from 'vue'
 
 export default defineComponent({
-  name: "index"
+  name: "third"
 })
 </script>
 
 <template>
-<div class="content">
-  <div class="question">
-    <div class="text">What is your current weight?</div>
-    <input class="weight-input" type="text" id="name" name="name" placeholder="kg" />
-    <nuxt-link to="/hb/second" class="weight-input in-button"><button class="weight-input in-button">Next!</button></nuxt-link>
+  <div class="content">
+    <div class="question">
+      <div class="text">Perfect! We’ve just set a goal. Let’s clarify some more things so that I help you achieve it more efficiently.</div>
+      <nuxt-link to="/hb/four" class="weight-input in-button"><button class="weight-input in-button">Next!</button></nuxt-link>
+    </div>
+    <div class="img-cont">
+      <img src="https://sun9-78.userapi.com/impg/U67Fp6Z-OK96-0F3HkVk9WXAMoOx0wu0KKslBQ/drJSS7ATDWo.jpg?size=604x602&quality=95&sign=2633d960b32b1868202e1eb0656f0998&type=album" alt="">
+    </div>
   </div>
-  <div class="img-cont">
-    <img src="https://sun9-78.userapi.com/impg/U67Fp6Z-OK96-0F3HkVk9WXAMoOx0wu0KKslBQ/drJSS7ATDWo.jpg?size=604x602&quality=95&sign=2633d960b32b1868202e1eb0656f0998&type=album" alt="">
-  </div>
-</div>
 </template>
 
 <style scoped>
@@ -39,13 +38,14 @@ input {
 }
 .text{
   font-family: 'Inter', sans-serif;
-  width: 100%;
+  width: 80%;
   text-align: center;
   font-weight: 600;
-  font-size: 1.4em;
+  font-size: 1.2em;
   letter-spacing: .04rem;
   margin-top: 100px;
   color: #11695B;
+  margin-bottom: 15px;
 }
 .question{
   display: flex;
