@@ -22,14 +22,10 @@ import Default from "~/layouts/default.vue";
 const { locale } = useI18n()
 const router = useRouter();
 
+let tg = window.Telegram.WebApp;
+tg.expand()
+
 onBeforeMount(() => {
-  let telegramApi = document.createElement('script')
-  telegramApi.setAttribute('src', 'https://telegram.org/js/telegram-web-app.js')
-  document.head.appendChild(telegramApi)
-
-  let tg = window.Telegram.WebApp;
-  tg.expand()
-
   const localLocale = localStorage.getItem('locale');
   const systemLocale = navigator.language;
   if (localLocale) {
