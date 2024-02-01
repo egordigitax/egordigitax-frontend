@@ -1,7 +1,7 @@
 <template>
-  <default>
+<!--  <default>-->
     <NuxtPage />
-  </default>
+<!--  </default>-->
 </template>
 
 <style>
