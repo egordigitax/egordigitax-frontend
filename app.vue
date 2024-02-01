@@ -16,6 +16,7 @@ body {
   padding-left: calc(100vw - 100%);
 }
 </style>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script setup lang="ts">
 import Default from "~/layouts/default.vue";
 
@@ -23,6 +24,8 @@ const { locale } = useI18n()
 const router = useRouter();
 
 onBeforeMount(() => {
+  let tg = window.Telegram.WebApp;
+  tg.expand()
   const localLocale = localStorage.getItem('locale');
   const systemLocale = navigator.language;
   if (localLocale) {
@@ -37,3 +40,4 @@ onBeforeMount(() => {
   }
 })
 </script>
+
