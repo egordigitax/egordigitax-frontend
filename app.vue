@@ -1,7 +1,7 @@
 <template>
-<!--  <default>-->
+  <default>
     <NuxtPage />
-<!--  </default>-->
+  </default>
 </template>
 
 <style>
@@ -22,9 +22,6 @@ import Default from "~/layouts/default.vue";
 const { locale } = useI18n()
 const router = useRouter();
 
-let tg = window.Telegram.WebApp;
-tg.expand()
-
 onBeforeMount(() => {
   const localLocale = localStorage.getItem('locale');
   const systemLocale = navigator.language;
@@ -40,4 +37,3 @@ onBeforeMount(() => {
   }
 })
 </script>
-
