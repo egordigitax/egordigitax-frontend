@@ -32,9 +32,6 @@ export default defineNuxtConfig({
         {property: 'og:image', content: 'https://i1.sndcdn.com/artworks-jed24yeHGhe9LXDz-ZRaA5A-t500x500.jpg'},
         {property: 'og:url', content: 'https://egordigitax.com/'},
         {property: "color-scheme", content: "light only"}
-      ],
-      script: [
-        { src: 'https://telegram.org/js/telegram-web-app.js', defer: true}
       ]
     }
   }
